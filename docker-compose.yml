@@ -1,0 +1,15 @@
+version: '3.2'
+
+services:
+  redis:
+    image: redis:6.0-alpine
+    ports:
+      - 6379:6379
+  postgres:
+    image: postgres:13-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: navneet
+      POSTGRES_DB: s3client 

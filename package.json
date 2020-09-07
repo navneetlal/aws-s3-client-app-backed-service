@@ -1,0 +1,48 @@
+{
+  "name": "s3-server-app",
+  "version": "1.0.0",
+  "description": "A server to authenticate and provide temporary storage for access token of AWS",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf build/ && tsc",
+    "start": "nodemon",
+    "start:prod": "npm run build && node build/index.js"
+  },
+  "keywords": [
+    "jsonwebtoken",
+    "typescript",
+    "s3",
+    "aws"
+  ],
+  "author": "Navneet Lal Gupta",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/express": "^4.17.8",
+    "@types/morgan": "^1.9.1",
+    "@types/node": "^14.6.4",
+    "@types/passport": "^1.0.4",
+    "@types/passport-jwt": "^3.0.3",
+    "@types/passport-local": "^1.0.33",
+    "@types/pg": "^7.14.4",
+    "@types/redis": "^2.8.27",
+    "nodemon": "^2.0.4",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.3.3",
+    "rate-limiter-flexible": "^2.1.10",
+    "redis": "^3.0.2",
+    "rotating-file-stream": "^2.1.3"
+  }
+}
